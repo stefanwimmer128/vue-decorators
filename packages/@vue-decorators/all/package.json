@@ -1,9 +1,9 @@
 {
   "name": "@vue-decorators/all",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./build",
   "dependencies": {
-    "@vue-decorators/apollo": "^1.0.0",
+    "@vue-decorators/apollo": "^1.0.1",
     "vue-class-component": "^7.1.0",
     "vue-property-decorator": "^8.1.1"
   },
