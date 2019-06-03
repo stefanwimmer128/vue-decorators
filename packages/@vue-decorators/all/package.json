@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "main": "./build",
   "scripts": {
+    "clean": "rm -dfr build",
     "build": "tsc || true"
   },
   "peerDependencies": {
