@@ -9,6 +9,7 @@ import {
     Component,
     Prop,
     SmartQuery,
+    SubscribeToMore,
 } from "@vue-decorators/all";
 
 @Component
@@ -39,6 +40,25 @@ class MyComponent extends Vue {
             return data.moreTest.test;
         },
     })
+    @SubscribeToMore<MyComponent, { moreTests: { test: string } }, { newTest: string }, { someArg: number }>({
+        document: gql`subscription($someArg: Int) {
+            newTest(someArg: $someArg)
+        }`,
+        variables: {
+            someArg: 0,
+        },
+        updateQuery(prevResult, options) {
+            return {
+                moreTest: {
+                    test: options.subscriptionData.data.test,
+                },
+            };
+        },
+    })
     readonly moreTest: string = "";
 }
 ```
+
+The Type arguments have sensible defaults and are not necessary.
+
+The `SubscribeToMore` decorator populates the queries `subscribeToMore` field.

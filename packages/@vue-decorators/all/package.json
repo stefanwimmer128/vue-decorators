@@ -1,10 +1,10 @@
 {
   "name": "@vue-decorators/all",
   "version": "1.3.0",
-  "main": "./build",
+  "main": "./lib",
   "scripts": {
     "clean": "rm -dfr build",
-    "build": "tsc || true"
+    "build": "tsc; echo \"Error code: $?\""
   },
   "peerDependencies": {
     "vue": "2",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@vue-decorators/apollo": "^1.3.0",
+    "@vue-decorators/types": "^1.3.0",
     "vue-class-component": "^7.1.0",
     "vue-property-decorator": "^8.1.1",
     "vuex-class": "^0.3.2"

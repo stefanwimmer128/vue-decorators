@@ -10,19 +10,22 @@ import {
     VueDecorator,
 } from "vue-class-component";
 
-interface SmartQueryOptions<V, T, R, I> extends VueApolloQueryOptions<V, R> {
+import VariableObjectType from "@vue-decorators/types/lib/VariableObjectType";
+import VueThisCallable from "@vue-decorators/types/lib/VueThisCallable";
+
+export interface SmartQueryOptions<V, T, R extends VariableObjectType, I extends VariableObjectType> extends VueApolloQueryOptions<V, R> {
     query: ((this: ApolloVueThisType<V>) => DocumentNode) | DocumentNode;
-    variables?: ((this: ApolloVueThisType<V>) => I | I);
+    variables?: I | ((this: ApolloVueThisType<V>) => I);
     update?: (this: ApolloVueThisType<V>, data: R) => T;
     client?: string;
 }
 
-type CallableSmartQueryOptions<V, T, R, I> = SmartQueryOptions<V, T, R, I> | ((this: ApolloVueThisType<V>) => SmartQueryOptions<V, T, R, I>);
+export type CallableSmartQueryOptions<V, T, R, I> = SmartQueryOptions<V, T, R, I> | ((this: ApolloVueThisType<V>) => SmartQueryOptions<V, T, R, I>);
 
 export default function SmartQuery(query: DocumentNode): VueDecorator;
-export default function SmartQuery<V = any, T = any, R = any, I = any>(options: CallableSmartQueryOptions<V, T, R, I>): VueDecorator;
+export default function SmartQuery<V = any, T = any, R = any, I = VariableObjectType>(options: VueThisCallable<V, SmartQueryOptions<V, T, R, I>>): VueDecorator;
 
-export default function SmartQuery<V = any, T = any, R = any, I = any>(options: DocumentNode | CallableSmartQueryOptions<V, T, R, I>) {
+export default function SmartQuery<V = any, T = any, R = any, I = VariableObjectType>(options: DocumentNode | VueThisCallable<V, SmartQueryOptions<V, T, R, I>>) {
     return createDecorator((cOptions: any, key) => {
         (cOptions.apollo = cOptions.apollo || {})[key] = options;
     });

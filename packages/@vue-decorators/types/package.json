@@ -1,0 +1,12 @@
+{
+  "name": "@vue-decorators/types",
+  "version": "1.3.0",
+  "main": "./lib",
+  "scripts": {
+    "clean": "rm -dfr build",
+    "build": "tsc; echo \"Error code: $?\""
+  },
+  "devDependencies": {
+    "typescript": "3.5.1"
+  }
+}
