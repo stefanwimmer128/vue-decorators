@@ -1,5 +1,5 @@
 import VueThisType from "./VueThisType";
 
-export default interface VueThisCallable<V, T> {
-    (this: VueThisType<V>): T;
-}
+type VueThisCallable<V, T> = T | ((this: VueThisType<V>) => T);
+
+export default VueThisCallable;
