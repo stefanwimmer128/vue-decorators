@@ -3,7 +3,7 @@
   "version": "1.4.2",
   "main": "./lib",
   "scripts": {
-    "clean": "rm -dfr build",
+    "clean": "rm -dfr lib",
     "build": "tsc; echo \"Error code: $?\""
   },
   "devDependencies": {
