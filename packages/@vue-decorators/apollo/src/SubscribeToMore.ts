@@ -10,8 +10,8 @@ import {
     VueDecorator,
 } from "vue-class-component";
 
-import VariableObjectType from "./types/VariableObjectType";
-import VueThisCallable from "./types/VueThisCallable";
+import VariableObjectType from "@vue-decorators/types/lib/VariableObjectType";
+import VueThisCallable from "@vue-decorators/types/lib/VueThisCallable";
 
 export interface SubscribeToMoreOptions<V, R extends VariableObjectType, S extends VariableObjectType, I extends VariableObjectType> {
     document: DocumentNode;
