@@ -1,6 +1,6 @@
 {
   "name": "@vue-decorators/types",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "main": "./lib",
   "scripts": {
     "clean": "rm -dfr build",
