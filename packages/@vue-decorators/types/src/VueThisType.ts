@@ -1,5 +1,5 @@
-type VueThisType<V> = V & {
-    [key: string]: any;
-};
+import VariableObjectType from "./VariableObjectType";
+
+type VueThisType<V> = V & VariableObjectType;
 
 export default VueThisType;
