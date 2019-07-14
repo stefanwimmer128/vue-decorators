@@ -4,10 +4,10 @@
   "main": "./lib",
   "scripts": {
     "clean": "rm -dfr lib",
-    "build": "tsc; echo \"Error code: $?\"",
+    "build": "tsc",
     "dev": "tsc -w"
   },
   "devDependencies": {
-    "typescript": "3.5.2"
+    "typescript": "3.5.3"
   }
 }
