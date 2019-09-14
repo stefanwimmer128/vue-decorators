@@ -1,6 +1,6 @@
 {
   "name": "@vue-decorators/apollo",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "main": "./lib",
   "scripts": {
     "clean": "rm -dfr lib",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@types/graphql": "^14.5.0",
-    "@vue-decorators/types": "1.6.0",
+    "@vue-decorators/types": "^1.7.0",
     "graphql": "^14.5.5",
     "vue-apollo": "^3.0.0-rc.4",
     "vue-class-component": "^7.1.0"
