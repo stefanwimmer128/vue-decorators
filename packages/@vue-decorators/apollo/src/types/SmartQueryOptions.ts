@@ -10,7 +10,7 @@ import {
 
 import SubscribeToMoreOptions from "./SubscribeToMoreOptions";
 
-export default interface SmartQueryOptions<TInstance = any, T = any, TData = any, TVars = any, TSubscriptionData = TData, TSubscriptionVars = TVars> extends Omit<VueApolloQueryDefinition<TInstance, TData>, "subscribeToMore"> {
+export default interface SmartQueryOptions<TInstance = any, T = any, TData = any, TVars = any, TSubscriptionData = TData, TSubscriptionVars = TVars> extends Omit<VueApolloQueryDefinition<TInstance, TData>, "update" | "variables" | "subscribeToMore"> {
     query: ((this: VueThisType<TInstance>) => DocumentNode) | DocumentNode;
     variables?: VueThisCallable<TInstance, TVars>;
     update?: (this: VueThisType<TInstance>, data: TData) => T;

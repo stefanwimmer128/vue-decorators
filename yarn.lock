@@ -2248,10 +2248,17 @@ graphql-tag@2.10.1:
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.10.1.tgz#10aa41f1cd8fae5373eaf11f1f67260a3cad5e02"
   integrity sha512-jApXqWBzNXQ8jYa/HLkZJaVw9jgwNqZkywa2zfFn16Iv1Zb7ELNHkJaXHR7Quvd5SIGsy6Ny7SUKATgnu05uEg==
 
-graphql@*, graphql@^14.5.5:
+graphql@*:
   version "14.5.5"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.5.5.tgz#7ec9d4f79f4d3c95e64c7ff6727bfe7068049d43"
   integrity sha512-Ly+hS+HY+gHN79ee7KTP25ZLUJJTMfpOMoDa3LSRZNFUh7w0CLAAgzuyOpOZQFAPWFwooEuakixh0EbVe+vqAA==
+  dependencies:
+    iterall "^1.2.2"
+
+graphql@^14.5.8:
+  version "14.5.8"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.5.8.tgz#504f3d3114cb9a0a3f359bbbcf38d9e5bf6a6b3c"
+  integrity sha512-MMwmi0zlVLQKLdGiMfWkgQD7dY/TUKt4L+zgJ/aR0Howebod3aNgP5JkgvAULiR2HPVZaP2VEElqtdidHweLkg==
   dependencies:
     iterall "^1.2.2"
 
@@ -4786,10 +4793,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vue-apollo@^3.0.0-rc.4:
-  version "3.0.0-rc.4"
-  resolved "https://registry.yarnpkg.com/vue-apollo/-/vue-apollo-3.0.0-rc.4.tgz#414342e86600aa0a5cd19027db4fb46cd81ca38c"
-  integrity sha512-cVP3KjCfYeUWU3c9cYM0VBLGh5Wtvu/dJNbgYD2rKFGSlW0RaUDYIQUnbssbFBMnLSY+1jKgqG7y9pyUMhtp6g==
+vue-apollo@^3.0.0-rc.6:
+  version "3.0.0-rc.6"
+  resolved "https://registry.yarnpkg.com/vue-apollo/-/vue-apollo-3.0.0-rc.6.tgz#ac5257cf0845d4290b9dd6dc491ee62eb1bc588a"
+  integrity sha512-P/U4akCOt59WojX5SSsg0K6yHWs04SO2ULEe6vXeCBpBkASRm3BybQIMY6DEIzMyp+y1QkhMLjVdGm+bx3Rurg==
   dependencies:
     chalk "^2.4.2"
     serialize-javascript "^1.7.0"
